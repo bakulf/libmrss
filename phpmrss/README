@@ -1,0 +1,9 @@
+Install:
+
+	phpize
+	./configure
+	make
+	make install
+
+Or:
+	./phpmrss_install.sh

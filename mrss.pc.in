@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=@includedir@
+
+Name: libmrss
+Description: library C for creating, parsing and writing feed rss
+Version: @VERSION@
+Requires: nxml
+Libs: -L${libdir} -lmrss
+Cflags:  -I${includedir}
