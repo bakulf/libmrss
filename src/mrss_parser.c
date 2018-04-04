@@ -258,15 +258,9 @@ __mrss_atom_prepare_date (mrss_t * data, char *datestr)
 
   memset (&stm, 0, sizeof (stm));
 
-  /* format: 2007-01-17T07:45:50Z */
-  if (sscanf
-      (datestr, "%04d-%02d-%02dT%02d:%02d:%02dZ", &stm.tm_year,
-       &stm.tm_mon, &stm.tm_mday, &stm.tm_hour, &stm.tm_min,
-       &stm.tm_sec) == 6)
-    {
-      char datebuf[256];
-      stm.tm_year -= 1900;
-      stm.tm_mon -= 1;
+  /* ISO8601 Local TZ timestamp: 2018-04-04T09:27:41CEST */
+  if (strptime(datestr, "%Y-%m-%dT%T%Z", &stm) != NULL) {
+    char datebuf[256];
 
 #ifdef USE_LOCALE
       if (!data->c_locale
