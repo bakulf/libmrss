@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/sh
+
+set -e
 
 aclocal
 libtoolize
 autoheader
 autoconf
-automake --add-missing
+automake --add-missing --foreign
