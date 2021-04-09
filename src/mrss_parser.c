@@ -134,11 +134,12 @@ static void __mrss_parser_atom_string(nxml_t *doc, nxml_data_t *cur,
     c1 = nxmle_get_string(cur, NULL);
 
     if (c1 && *c1) {
-      total = strdup(c1);
+      total = c1;
       size = strlen(total);
     }
 
     else {
+      free(c1);
       while ((ncur = cur->children)) {
         char *buffer = NULL, *p;
         char *tmp;
