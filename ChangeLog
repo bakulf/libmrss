@@ -1,3 +1,6 @@
+2021-08-02	libmrss		0.19.3
+	Dacav's patches to fix crashes, indentation, tests, and much more.
+
 2008-08-21	libmrss		0.19.2
 	Gregor Herrmann's patch about signals and curl
 
