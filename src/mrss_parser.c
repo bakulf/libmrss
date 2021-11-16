@@ -330,8 +330,8 @@ static void __mrss_parser_atom_entry(nxml_t *doc, nxml_data_t *cur,
 
       /* right -> copyright */
       else if (!item->copyright && !strcmp(cur->value, "rights"))
-        __mrss_parser_atom_string(doc, cur, &item->description,
-                                  &item->description_type);
+        __mrss_parser_atom_string(doc, cur, &item->copyright,
+                                  &item->copyright_type);
 
       /* author structure -> author elements */
       else if (!strcmp(cur->value, "author"))
