@@ -1,6 +1,6 @@
 m4_define([libmrss_major_version], [0])
 m4_define([libmrss_minor_version], [19])
-m4_define([libmrss_macro_version], [3])
+m4_define([libmrss_macro_version], [4])
 
 m4_define([libmrss_version],
           [libmrss_major_version.libmrss_minor_version.libmrss_macro_version])

@@ -968,8 +968,10 @@ static mrss_error_t __mrss_parser_rss(mrss_version_t v, nxml_t *doc,
           data->cloud_domain = attr;
 
         if (!data->cloud_port &&
-            (attr = nxmle_find_attribute(cur, "port", NULL)))
+            (attr = nxmle_find_attribute(cur, "port", NULL))) {
           data->cloud_port = atoi(attr);
+          free(attr);
+        }
 
         if (!data->cloud_registerProcedure &&
             (attr = nxmle_find_attribute(cur, "registerProcedure", NULL)))

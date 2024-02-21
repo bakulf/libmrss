@@ -1,3 +1,6 @@
+2024-02-21	libmrss		0.19.4
+	Fix a memory leak
+
 2021-08-02	libmrss		0.19.3
 	Dacav's patches to fix crashes, indentation, tests, and much more.
 
